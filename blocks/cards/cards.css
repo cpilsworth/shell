@@ -9,7 +9,18 @@
 
 .cards > ul > li {
   border: 1px solid var(--highlight-background-color);
-  background-color: var(--background-color)
+  background-color: var(--background-color);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.cards > ul > li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 8px hsla(0 0% 0% / 0.2);
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    transition-property: background-color, color, transform, box-shadow, opacity, top;
+    transition-duration: 1s;
 }
 
 .cards .cards-card-body {
