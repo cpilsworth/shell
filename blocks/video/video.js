@@ -9,8 +9,8 @@ export default async function decorate(block) {
   if (a) {
     const source = a.href;
     block.innerHTML = `
-    <video controls>
-      <source src="${source}" type="video/${source.split('.').pop()}" >
+    <video muted autoplay>
+      <source src="${source}" type="video/${source.split('.').pop()}">
     </video>
     `;
   }
