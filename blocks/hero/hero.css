@@ -6,6 +6,8 @@ main .hero-container > div {
   
 main .hero-container {
   padding: 0;
+  /* temporarily hide */
+  display: none;
 }
   
 main .hero {
