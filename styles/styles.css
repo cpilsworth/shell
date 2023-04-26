@@ -242,7 +242,8 @@ main .section.highlight {
   background-color: var(--highlight-background-color);
 }
 
-.centre-title h1, .centre-title h2, .centre-title h3  {
+h1, h2 {
   text-align: center;
   margin-bottom: 50px;
 }
+
