@@ -1,9 +1,9 @@
-# Your Project's Title...
-Your project's description...
+# AEM Franklin Shell
+A quick prototype of the Shell site using next-gen composable CMS functionality
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.hlx.page/
-- Live: https://main--{repo}--{owner}.hlx.live/
+- Preview: https://main--shell--cpilsworth.hlx.page/
+- Live: https://main--shell--cpilsworth.hlx.live/
 
 ## Installation
 
