@@ -49,3 +49,24 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
+
+
+.cards.headline * h1 {
+  text-align: left;
+}
+
+.cards.headline * h1 {
+  text-align: left;
+}
+
+cards.headline > ul > li:first-child {
+  position: relative
+}
+
+.cards.headline > ul > li:first-child .cards-card-image {
+  z-index: -1;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+}
