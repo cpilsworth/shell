@@ -176,12 +176,12 @@ header nav .nav-sections ul  {
   padding-left: 0;
   font-size: var(--body-font-size-s);
   font-weight: 500;
-  padding-bottom: 32px;
+  padding-bottom: 16px;
 }
 
 header nav .nav-sections ul > li {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 60px;
   border-top: 1px solid var(--highlight-background-color);
   border-bottom: 4px solid var(--text-color);
