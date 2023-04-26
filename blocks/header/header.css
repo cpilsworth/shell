@@ -39,6 +39,9 @@ header nav[aria-expanded="true"] {
 @media (min-width: 900px) {
   header nav {
     display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: start;
     justify-content: space-between;
   }
 
@@ -141,14 +144,14 @@ header nav[aria-expanded="true"] .nav-hamburger-icon::after {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 128px;
+  flex-basis: 64px;
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 64px;
   height: auto;
 }
 
@@ -165,6 +168,7 @@ header nav[aria-expanded="true"] .nav-sections {
   display: block;
   visibility: visible;
   align-self: start;
+  min-width: 100%;
 }
 
 header nav .nav-sections ul  {
@@ -172,10 +176,29 @@ header nav .nav-sections ul  {
   padding-left: 0;
   font-size: var(--body-font-size-s);
   font-weight: 500;
+  padding-bottom: 32px;
 }
 
 header nav .nav-sections ul > li {
   font-weight: 700;
+  font-size: 14px;
+  line-height: 60px;
+  border-top: 1px solid var(--highlight-background-color);
+  border-bottom: 4px solid var(--text-color);
+}
+
+header nav .nav-sections ul > li:hover {
+  background-color: var(--highlight-background-color);
+}
+
+header nav .nav-sections ul > li:first-child {
+  border-bottom-color: #fad70a;
+}
+
+header nav .nav-sections ul > li:last-child {
+  padding-right: auto;
+  width: auto;
+  flex-grow: 1;
 }
 
 header nav .nav-sections ul > li > ul {
@@ -225,7 +248,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 2em;
+    /* gap: 2em; */
     margin: 0;
     font-size: var(--body-font-size-xs);
   }
@@ -234,6 +257,7 @@ header nav .nav-sections ul > li > ul > li {
     flex: 0 1 auto;
     position: relative;
     font-weight: 500;
+    padding: 0 16px;
   }
 
   header nav .nav-sections > ul > li > ul {
@@ -272,4 +296,12 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+  order: 5;
+  min-width: 100%;
+  display: none;
+}
+
+header nav .nav-tools ul li {
+  display: inline-block;
+  margin-left: 1em;
 }
