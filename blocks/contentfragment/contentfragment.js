@@ -45,6 +45,7 @@ async function getCategory(persistedQuery) {
     }).then((response) => response.json());
     let item = json?.data?.categoryByPath?.item;
     item.description = item.description.html;
+    return item;
 }
 /**
  * Detects whether the site is embedded in the universal editor by counting parent frames
