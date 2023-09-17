@@ -14,7 +14,7 @@ export default async function decorate(block) {
     elem.innerHTML = `
         <div class="category-item-content">
             <h2 class="category-item-title" itemprop="title" itemtype="text">${category.title}</h2>
-            <p class="category-item-desc" itemprop="description" itemtype="richtext">${category.description.html}</p>
+            <p class="category-item-desc" itemprop="description" itemtype="richtext">${category.description}</p>
         </div>`;
     root.appendChild(elem);
     block.textContent = "";
@@ -43,7 +43,8 @@ async function getCategory(persistedQuery) {
     const json = await fetch(url, {
         credentials: "include"
     }).then((response) => response.json());
-    return json?.data?.categoryByPath?.item;
+    let item = json?.data?.categoryByPath?.item;
+    item.description = item.description.html;
 }
 /**
  * Detects whether the site is embedded in the universal editor by counting parent frames
@@ -72,13 +73,4 @@ function addCacheKiller(url) {
     let params = newUrl.searchParams;
     params.append("ck", Date.now());
     return newUrl.toString();
-}
-
-
-function getImageUrl(image, isUE) {
-    if (isUE) { 
-        return image["_authorUrl"];
-    }
-    const url = new URL(image["_publishUrl"])
-    return `https://${url.hostname}${image["_dynamicUrl"]}`
 }
