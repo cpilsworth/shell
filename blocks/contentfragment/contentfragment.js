@@ -14,7 +14,7 @@ export default async function decorate(block) {
     elem.innerHTML = `
         <div class="category-item-content">
             <h2 class="category-item-title" itemprop="title" itemtype="text">${category.title}</h2>
-            <p class="category-item-desc" itemprop="description" itemtype="richtext">${category.description}</p>
+            <p class="category-item-desc" itemprop="description" itemtype="richtext">${category.description.html}</p>
         </div>`;
     root.appendChild(elem);
     block.textContent = "";
