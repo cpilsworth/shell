@@ -13,6 +13,7 @@ import {
   loadCSS,
 } from './lib-franklin.js';
 
+
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 
 /**
@@ -128,3 +129,5 @@ async function loadPage() {
 }
 
 loadPage();
+
+import './universal-editor-embedded.js';
