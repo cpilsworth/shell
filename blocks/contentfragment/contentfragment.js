@@ -9,8 +9,8 @@ export default async function decorate(block) {
     const elem = document.createElement('div');
     elem.setAttribute("class", "category-item");
     elem.setAttribute("itemscope", "");
-    elem.setAttribute("itemid", `urn:aemconnection:${category._path}/jcr:content/data/master`);
-    elem.setAttribute("itemtype", "component");
+    elem.setAttribute("itemid", `urn:aemconnection:${category._path}/jcr:content/data/master`);                                 
+    elem.setAttribute("itemtype", "reference");
     elem.setAttribute("itemfilter", "cf");
     elem.innerHTML = `
         <div class="category-item-content">
@@ -22,9 +22,9 @@ export default async function decorate(block) {
     block.append(root);
 
     const meta = document.createElement('meta');
-    meta.name = "urn:adobe:aem:editor:aemconnection" 
-    meta.content="aem:https://author-p31359-e804016.adobeaemcloud.com" 
-    meta['data-rh'] ="true"
+    meta.name = "urn:adobe:aem:editor:aemconnection";
+    meta.content="aem:https://author-p31359-e804016.adobeaemcloud.com";
+    meta['data-rh'] = "true";
     document.head.appendChild(meta);
 }
 
