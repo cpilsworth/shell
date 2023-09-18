@@ -10,7 +10,7 @@ export default async function decorate(block) {
     elem.setAttribute("class", "category-item");
     elem.setAttribute("itemscope", "");
     elem.setAttribute("itemid", `urn:aemconnection:${category._path}/jcr:content/data/master`);
-    elem.setAttribute("itemtype", "reference");
+    elem.setAttribute("itemtype", "component");
     elem.setAttribute("itemfilter", "cf");
     elem.innerHTML = `
         <div class="category-item-content">
