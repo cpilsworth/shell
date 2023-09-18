@@ -11,6 +11,7 @@ export default async function decorate(block) {
     elem.setAttribute("itemscope", "");
     elem.setAttribute("itemid", `urn:aemconnection:${category._path}/jcr:content/data/master`);
     elem.setAttribute("itemtype", "reference");
+    elem.setAttribute("itemfilter", "cf");
     elem.innerHTML = `
         <div class="category-item-content">
             <h2 class="category-item-title" itemprop="title" itemtype="text">${category.title}</h2>
