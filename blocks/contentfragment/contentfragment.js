@@ -19,6 +19,12 @@ export default async function decorate(block) {
     root.appendChild(elem);
     block.textContent = "";
     block.append(root);
+
+    const meta = document.createElement('meta');
+    meta.name = "urn:adobe:aem:editor:aemconnection" 
+    meta.content="aem:https://author-p31359-e804016.adobeaemcloud.com" 
+    meta['data-rh'] ="true"
+    document.head.appendChild(meta);
 }
 
 /**
