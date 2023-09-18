@@ -13,7 +13,7 @@ export default async function decorate(block) {
     elem.setAttribute("itemtype", "reference");
     elem.setAttribute("itemfilter", "cf");
     elem.innerHTML = `
-        <div class="category-item-content">
+        <div data-class="category-item-content">
             <h2 class="category-item-title" itemprop="title" itemtype="text">${category.title}</h2>
             <div class="category-item-desc" itemprop="description" itemtype="richtext">${category.description}</div>
         </div>`;
